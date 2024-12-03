@@ -2,7 +2,7 @@
 
 [![Haskell-CI](https://github.com/bellroy/hs-botocore/actions/workflows/haskell-ci.yml/badge.svg)](https://github.com/bellroy/hs-botocore/actions/workflows/haskell-ci.yml)
 
-This library provides types a precise parser for the
+This library provides types and a precise parser for the
 "[`botocore`](https://github.com/boto/botocore/)" definitions of Amazon
 Web Services (AWS) service APIs. These definitions are JSON files
 which describe the operations, requests, responses, and errors for
