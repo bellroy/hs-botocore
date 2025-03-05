@@ -177,7 +177,7 @@ jobs:
       - name: doctest
         run: |
           cd ${PKGDIR_PROJECT} || false
-          doctest -XHaskell2010 src
+          doctest -XGHC2021 src
       - name: cabal check
         run: |
           cd ${PKGDIR_PROJECT} || false
