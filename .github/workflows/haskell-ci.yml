@@ -12,7 +12,7 @@ jobs:
         name: Extract the tested GHC versions
         uses: "kleidukos/get-tested@a0aa3f2d4ab0d10daa49dc9ee8c706d673fb0e02"
         with:
-          cabal-file: hs-botocore.cabal
+          cabal-file: botocore.cabal
           ubuntu-version: '20.04'
           version: '0.1.7.1'
     timeout-minutes: 30
@@ -138,17 +138,17 @@ jobs:
           find sdist -maxdepth 1 -type f -name '*.tar.gz' -exec tar -C $GITHUB_WORKSPACE/unpacked -xzvf {} \;
       - name: generate cabal.project
         run: |
-          PKGDIR_PROJECT="$(find "$GITHUB_WORKSPACE/unpacked" -maxdepth 1 -type d -regex '.*/hs-botocore-[0-9.]*')"
+          PKGDIR_PROJECT="$(find "$GITHUB_WORKSPACE/unpacked" -maxdepth 1 -type d -regex '.*/botocore-[0-9.]*')"
           echo "PKGDIR_PROJECT=${PKGDIR_PROJECT}" >> "$GITHUB_ENV"
           rm -f cabal.project cabal.project.local
           touch cabal.project
           touch cabal.project.local
           echo "packages: ${PKGDIR_PROJECT}" >> cabal.project
-          echo "package hs-botocore" >> cabal.project
+          echo "package botocore" >> cabal.project
           echo "    ghc-options: -Werror=missing-methods" >> cabal.project
           cat >> cabal.project <<EOF
           EOF
-          $HCPKG list --simple-output --names-only | perl -ne 'for (split /\s+/) { print "constraints: any.$_ installed\n" unless /^(hs-botocore)$/; }' >> cabal.project.local
+          $HCPKG list --simple-output --names-only | perl -ne 'for (split /\s+/) { print "constraints: any.$_ installed\n" unless /^(botocore)$/; }' >> cabal.project.local
           cat cabal.project
           cat cabal.project.local
       - name: dump install plan
