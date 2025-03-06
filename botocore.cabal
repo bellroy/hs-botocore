@@ -1,23 +1,22 @@
-cabal-version: 2.2
-name:          botocore
-version:       0.1.0.0
-synopsis:      Representation of botocore types
+cabal-version:   2.2
+name:            botocore
+version:         0.1.0.0
+synopsis:        Representation of botocore types
 description:
   This library provides types a precise parser for the "botocore"
   definitions of Amazon Web Services (AWS) service APIs.
-homepage:      https://github.com/brendanhay/amazonka
-bug-reports:   https://github.com/brendanhay/amazonka/issues
-license:       BSD-3-Clause
-license-file:  LICENSE
-author:        Bellroy Tech Team <haskell@bellroy.com>
-maintainer:    Bellroy Tech Team <haskell@bellroy.com>
-copyright:     Copyright (c) 2023 Bellroy Pty Ltd
-category:      AWS
-build-type:    Simple
-extra-doc-files:
-  README.md
 
-tested-with: GHC ==9.4.8
+homepage:        https://github.com/brendanhay/amazonka
+bug-reports:     https://github.com/brendanhay/amazonka/issues
+license:         BSD-3-Clause
+license-file:    LICENSE
+author:          Bellroy Tech Team <haskell@bellroy.com>
+maintainer:      Bellroy Tech Team <haskell@bellroy.com>
+copyright:       Copyright (c) 2023 Bellroy Pty Ltd
+category:        AWS
+build-type:      Simple
+extra-doc-files: README.md
+tested-with:     GHC ==9.2.5 || ==9.4.8 || ==9.6.6
 
 source-repository head
   type:     git
@@ -31,15 +30,15 @@ library
     -Wincomplete-record-updates
 
   build-depends:
-    , aeson         >=2.1.2.0  && <2.2  || ^>=2.2
+    , aeson         ^>=2.1.2.0 || ^>=2.2
     , barbies       ^>=2.0.5.0
     , barbies-th    ^>=0.1.10
-    , base          >=4.14     && <4.18
-    , containers    ^>=0.6.7
+    , base          >=4.14     && <4.22
+    , containers    ^>=0.6.5   || ^>=0.7
     , generic-lens  ^>=2.2.2.0
     , scientific    ^>=0.3.7.0
     , some          ^>=1.0.6
-    , text          ^>=2.0
+    , text          ^>=1.2     || ^>=2.0 || ^>=2.1
 
   exposed-modules:
     Botocore.Paginators

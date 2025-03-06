@@ -5,16 +5,8 @@
 
   outputs = inputs:
     inputs.bellroy-nix-foss.lib.haskellProject {
-      cabalPackages = [
-        {
-          name = "botocore";
-          path = ./botocore.nix;
-        }
-      ];
-      supportedCompilers = [ "ghc8107" "ghc92" "ghc94" ];
+      src = ./.;
+      supportedCompilers = [ "ghc92" "ghc94" "ghc96" ];
       defaultCompiler = "ghc94";
-      haskellPackagesOverride = { compilerName, haskellLib, final, prev }: {
-        barbies-th = haskellLib.unmarkBroken prev.barbies-th;
-      };
     };
 }
