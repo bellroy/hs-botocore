@@ -38,7 +38,7 @@ library
     , generic-lens  ^>=2.2.2.0
     , scientific    ^>=0.3.7.0
     , some          ^>=1.0.6
-    , text          ^>=2.1
+    , text          ^>=2.0     || ^>=2.1
 
   exposed-modules:
     Botocore.Paginators
