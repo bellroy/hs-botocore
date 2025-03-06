@@ -6,7 +6,7 @@
   outputs = inputs:
     inputs.bellroy-nix-foss.lib.haskellProject {
       src = ./.;
-      supportedCompilers = [ "ghc8107" "ghc90" "ghc92" "ghc94" "ghc96" ];
+      supportedCompilers = [ "ghc92" "ghc94" "ghc96" ];
       defaultCompiler = "ghc94";
     };
 }
