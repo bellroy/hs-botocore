@@ -16,13 +16,7 @@ copyright:       Copyright (c) 2023 Bellroy Pty Ltd
 category:        AWS
 build-type:      Simple
 extra-doc-files: README.md
-tested-with:
-  GHC ==9.2.5
-   || ==9.4.8
-   || ==9.6.6
-   || ==9.8.2
-   || ==9.10.1
-   || ==9.12.1
+tested-with:     GHC ==9.2.5 || ==9.4.8 || ==9.6.6
 
 source-repository head
   type:     git
