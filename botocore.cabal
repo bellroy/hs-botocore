@@ -37,7 +37,7 @@ library
     , containers    ^>=0.6.5   || ^>=0.7   || ^>=0.8
     , generic-lens  ^>=2.2.2.0 || ^>=2.3
     , scientific    ^>=0.3.7.0
-    , some          ^>=1.0.6   || ^>=1.1.0
+    , some          ^>=1.0.6   || ^>=1.1
     , text          ^>=1.2     || ^>=2.0   || ^>=2.1
 
   exposed-modules:
