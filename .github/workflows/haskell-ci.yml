@@ -48,12 +48,13 @@ jobs:
           repository: bellroy/actions
           token: ${{ steps.token.outputs.token }}
           sparse-checkout: haskell-os-ci
-          ref: haskell-os-ci-v1
+          ref: ghc-version
 
       - name: Validate build, tests, and packaging
         uses: ./haskell-os-ci
         with:
           cabal-file-relative-path: botocore
+          ghc-version: ${{ matrix.ghc }}
 
   tests-completion:
     name: All tests jobs completed
