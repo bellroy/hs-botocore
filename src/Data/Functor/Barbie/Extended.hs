@@ -7,7 +7,7 @@
 -- Portability : non-portable (GHC extensions)
 module Data.Functor.Barbie.Extended (module Data.Functor.Barbie, bfor) where
 
-import Data.Functor.Barbie
+import Data.Functor.Barbie hiding (bfor)
 
 bfor ::
   (TraversableB b, Applicative e) =>
